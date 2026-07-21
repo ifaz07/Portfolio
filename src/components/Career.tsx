@@ -22,7 +22,7 @@ const Career = () => {
             </div>
             <p>
               Sep 2022 – Jun 2026, Dhaka. Dean's List across multiple semesters.
-              Coursework in Machine Learning, NLP, Database Systems, Software
+              Coursework in Machine Learning, NLP, Data Science, Database Systems, Software
               Engineering, Data Structure & Algorithms, and System Analysis &amp; Design.
             </p>
           </div>
@@ -61,7 +61,7 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>ML &amp; Data Science</h4>
+                <h4>ML, NLP &amp; Data Science</h4>
                 <h5>Python · Pandas · NumPy · Scikit-learn · Matplotlib</h5>
               </div>
               <h3>2025</h3>

@@ -82,7 +82,7 @@ const projects: Project[] = [
     github: "https://github.com/ifaz07/EchoMinutes---AI-Meeting-Assistant",
   },
   {
-    group: "AI / ML / NLP",
+    group: "Machine Learning",
     title: "Fraud Detection",
     category: "EDA and Classification Pipeline",
     tools: "Python, Scikit-learn, SMOTE, Pandas, Matplotlib, Seaborn",
@@ -93,7 +93,7 @@ const projects: Project[] = [
     github: "https://github.com/ifaz07/Machine-Learning-Projects",
   },
   {
-    group: "AI / ML / NLP",
+    group: "Natural Language Processing",
     title: "NLP Text Classifier",
     category: "ML vs Deep Learning Benchmark",
     tools: "Python, TF-IDF, Word2Vec, RNN, LSTM, GRU, Scikit-learn",
@@ -118,7 +118,7 @@ const projects: Project[] = [
     github: "https://github.com/ifaz07/Undergraduate-Thesis---Bangla-Language-Hallucination-Detection",
   },
   {
-    group: "Research",
+    group: "Data Science Research",
     title: "AI-Generated Code Detection",
     category: "Stylometric ML Pipeline",
     tools: "Python, TF-IDF, PyTorch, Scikit-learn, Pandas, PCA, t-SNE",

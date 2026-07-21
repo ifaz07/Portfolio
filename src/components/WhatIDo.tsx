@@ -57,6 +57,7 @@ const WhatIDo = () => {
                     <div className="what-tags">BERT &amp; mDeBERTa</div>
                     <div className="what-tags">RNN / LSTM / GRU</div>
                     <div className="what-tags">LangChain &amp; RAG</div>
+                    <div className="what-tags">VectorDb </div>
                   </div>
                 </div>
               </div>

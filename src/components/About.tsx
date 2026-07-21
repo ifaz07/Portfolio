@@ -6,11 +6,10 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          I'm a Computer Science graduate from BRAC University, finishing in June, 2026
-          with a CGPA of 3.90. I learn by building, so most of my degree went into
-          shipping things that had to actually work: full stack platforms, REST
-          APIs, ML pipelines, and an A+ thesis on hallucination detection in
-          Bangla language models.
+          I'm a Computer Science graduate from BRAC University with a CGPA of 3.90, building backend services and
+          REST APIs with the same rigor I bring to testing what I ship, from edge case validation to defect documentation.
+          I've shipped full stack platforms, REST APIs, ML pipelines, and dashboards that turn data into something usable.
+
         </p>
       </div>
     </div>
