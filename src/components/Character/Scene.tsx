@@ -31,7 +31,16 @@ const Scene = () => {
       let onResize: (() => void) | null = null;
       let frameId = 0;
       const rect = canvasDiv.current.getBoundingClientRect();
-      const container = { width: rect.width, height: rect.height };
+      // Both MainContainer and Character are lazy-loaded, so this effect can run
+      // before the section CSS has applied and the container still measures 0.
+      // Dividing by a 0 height yields an Infinity aspect, which permanently
+      // corrupts the projection matrix (character renders hugely zoomed in).
+      // Fall back to the viewport, then let the ResizeObserver below correct it
+      // as soon as real layout lands.
+      const container = {
+        width: rect.width || window.innerWidth,
+        height: rect.height || window.innerHeight,
+      };
       const aspect = container.width / container.height;
       const scene = sceneRef.current;
 
@@ -50,6 +59,23 @@ const Scene = () => {
       const camera = new THREE.PerspectiveCamera(14.5, aspect, 0.1, 1000);
       camera.position.z = 10;
       camera.position.set(0, 13.1, 24.7);
+
+      // Keeps the projection matched to the real container box. Deliberately
+      // does NOT rebuild the GSAP timelines the way handleResize does; this can
+      // fire during layout and must stay cheap.
+      let lastW = container.width;
+      let lastH = container.height;
+      const sizeObserver = new ResizeObserver(([entry]) => {
+        const { width, height } = entry.contentRect;
+        if (!width || !height) return;
+        if (Math.abs(width - lastW) < 1 && Math.abs(height - lastH) < 1) return;
+        lastW = width;
+        lastH = height;
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      });
+      sizeObserver.observe(mountedDiv);
       camera.zoom = 1.1;
       camera.updateProjectionMatrix();
 
@@ -140,6 +166,7 @@ const Scene = () => {
       return () => {
         disposed = true;
         cancelAnimationFrame(frameId);
+        sizeObserver.disconnect();
         clearTimeout(debounce);
         if (onResize) window.removeEventListener("resize", onResize);
         document.removeEventListener("mousemove", onMouseMove);

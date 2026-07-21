@@ -1,11 +1,20 @@
 import { SplitText } from "gsap/SplitText";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { smoother } from "../Navbar";
 
 export function initialFX() {
   document.body.style.overflowY = "auto";
   smoother.paused(false);
   document.getElementsByTagName("main")[0].classList.add("main-active");
+
+  // The scroll timelines are built in character.ts the moment the model loads,
+  // which is while the loading screen is still up and the body is unscrollable.
+  // Those trigger positions are measured against a non-final layout, so scrub
+  // progress comes out wrong and sections such as .landing-container and
+  // .about-section can stay stuck at opacity 0. Re-measure now that the page is
+  // actually scrollable and laid out.
+  ScrollTrigger.refresh();
   gsap.to("body", {
     backgroundColor: "#0a0e17",
     duration: 0.5,

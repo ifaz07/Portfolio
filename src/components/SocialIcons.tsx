@@ -1,5 +1,13 @@
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
+import {
+  EMAIL,
+  GMAIL_COMPOSE,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  LEETCODE_URL,
+  RESUME_PATH,
+} from "../data/contact";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
@@ -75,7 +83,7 @@ const SocialIcons = () => {
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
           <a
-            href="https://github.com/ifaz07"
+            href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
@@ -85,7 +93,7 @@ const SocialIcons = () => {
         </span>
         <span>
           <a
-            href="https://www.linkedin.com/in/ifaz-alamgir-407375247"
+            href={LINKEDIN_URL}
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
@@ -95,7 +103,7 @@ const SocialIcons = () => {
         </span>
         <span>
           <a
-            href="https://leetcode.com/u/ifaz_07/"
+            href={LEETCODE_URL}
             target="_blank"
             rel="noreferrer"
             aria-label="LeetCode"
@@ -104,14 +112,19 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="mailto:ifazalamgir7@gmail.com" aria-label="Email">
+          <a
+            href={GMAIL_COMPOSE}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Email ${EMAIL}`}
+          >
             <FaEnvelope />
           </a>
         </span>
       </div>
       <a
         className="resume-button"
-        href="/Mohammad_Ifaz_Alamgir.pdf"
+        href={RESUME_PATH}
         target="_blank"
         rel="noreferrer"
       >

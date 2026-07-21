@@ -1,5 +1,15 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
+import {
+  EMAIL,
+  GMAIL_COMPOSE,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  LEETCODE_URL,
+  PHONE,
+  PHONE_HREF,
+  RESUME_PATH,
+} from "../data/contact";
 
 const Contact = () => {
   return (
@@ -10,13 +20,18 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Get in touch</h4>
             <p>
-              <a href="mailto:ifazalamgir7@gmail.com" data-cursor="disable">
-                ifazalamgir7@gmail.com
+              <a
+                href={GMAIL_COMPOSE}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="disable"
+              >
+                {EMAIL}
               </a>
             </p>
             <p>
-              <a href="tel:+8801747572247" data-cursor="disable">
-                +880 1747572247
+              <a href={`tel:${PHONE_HREF}`} data-cursor="disable">
+                {PHONE}
               </a>
             </p>
             <p>Dhaka, Bangladesh</p>
@@ -28,7 +43,7 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://github.com/ifaz07"
+              href={GITHUB_URL}
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -37,7 +52,7 @@ const Contact = () => {
               GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/ifaz-alamgir-407375247"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -46,7 +61,7 @@ const Contact = () => {
               LinkedIn <MdArrowOutward />
             </a>
             <a
-              href="https://leetcode.com/u/ifaz_07/"
+              href={LEETCODE_URL}
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -55,14 +70,16 @@ const Contact = () => {
               LeetCode <MdArrowOutward />
             </a>
             <a
-              href="mailto:ifazalamgir7@gmail.com"
+              href={GMAIL_COMPOSE}
+              target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
               Email <MdArrowOutward />
             </a>
             <a
-              href="/Mohammad_Ifaz_Alamgir.pdf"
+              href={RESUME_PATH}
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"

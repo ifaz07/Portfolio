@@ -23,7 +23,7 @@ const Career = () => {
             <p>
               Sep 2022 – Jun 2026, Dhaka. Dean's List across multiple semesters.
               Coursework in Machine Learning, NLP, Database Systems, Software
-              Engineering, Algorithms, and System Analysis &amp; Design.
+              Engineering, Data Structure & Algorithms, and System Analysis &amp; Design.
             </p>
           </div>
           <div className="career-info-box">
@@ -45,7 +45,7 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Undergraduate Thesis</h4>
-                <h5>NLP Research · Bangla LLMs</h5>
+                <h5>NLP Research · Bangla LLMs · PyTorch</h5>
               </div>
               <h3>2025–26</h3>
             </div>
@@ -83,8 +83,8 @@ const Career = () => {
             </div>
             <p>
               Shipped Shomadhan (civic issue tracking, 97 Lighthouse
-              performance), ShastoSheba (telehealth with video consultations and
-              mobile banking payments), and FindYourTurf (venue booking), each
+              performance), ShastoSheba (telehealth with video consultations,
+              Ai Health Assistant and chatting system), and FindYourTurf (venue booking), each
               built around multiple user roles, normalized schemas, and
               role-based access.
             </p>

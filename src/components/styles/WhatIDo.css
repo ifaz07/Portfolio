@@ -32,36 +32,46 @@
 .do-h2 {
   color: var(--accentColor);
 }
+
 .what-box-in {
   flex-direction: column;
-  height: 500px;
+  height: auto;
   margin-left: 200px;
   position: relative;
   display: none;
 }
 .what-content {
   width: 450px;
-  height: 33%;
-  min-height: 50%;
-  transition: 0.5s;
-  /* border: 0.5px dashed rgba(255, 255, 255, 0.3); */
+  transition: padding 0.5s;
   position: relative;
   padding: 50px;
   box-sizing: border-box;
 }
-
-.what-noTouch:hover,
+.what-content:hover,
 .what-content-active {
-  min-height: 67%;
   padding: 40px 50px;
 }
-
-.what-noTouch:hover ~ .what-content,
-.what-box-in:hover .what-noTouch:not(:hover),
+.what-content:hover ~ .what-content,
+.what-box-in:hover .what-content:not(:hover),
 .what-content.what-sibling {
-  min-height: 33%;
   padding: 10px 50px;
 }
+
+/* --- Expand/collapse via grid track animation --- */
+.what-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s;
+}
+.what-collapse-in {
+  overflow: hidden;
+  min-height: 0;
+}
+.what-content:hover .what-collapse,
+.what-content-active .what-collapse {
+  grid-template-rows: 1fr;
+}
+
 .what-content h3 {
   font-size: 35px;
   letter-spacing: 1px;
@@ -149,6 +159,11 @@
   width: 25px;
   height: 25px;
   border: 1px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  pointer-events: auto;
 }
 .what-arrow::before {
   content: "";
@@ -162,7 +177,7 @@
   width: 10px;
   height: 10px;
 }
-.what-noTouch:hover .what-arrow::before,
+.what-content:hover .what-arrow::before,
 .what-content-active .what-arrow::before {
   transform: translate(-50%, -20%) rotate(-225deg);
 }
@@ -204,10 +219,6 @@
   transform: translateY(-50%);
   position: absolute;
 }
-.what-content-in {
-  height: 100%;
-  overflow: hidden;
-}
 .what-content-in h5 {
   font-weight: 300;
   opacity: 0.5;
@@ -248,9 +259,6 @@
   .what-box h2 {
     margin-right: 20%;
   }
-  .what-box-in {
-    height: 400px;
-  }
   .what-content h3 {
     font-size: 28px;
   }
@@ -261,13 +269,13 @@
   .what-content p {
     font-size: 13px;
   }
-  .what-noTouch:hover,
+  .what-content:hover,
   .what-content-active {
     padding: 20px 30px;
   }
 
-  .what-noTouch:hover ~ .what-content,
-  .what-box-in:hover .what-noTouch:not(:hover),
+  .what-content:hover ~ .what-content,
+  .what-box-in:hover .what-content:not(:hover),
   .what-content.what-sibling {
     padding: 10px 30px;
   }
@@ -290,7 +298,6 @@
     padding-bottom: 50px;
   }
   .what-box-in {
-    height: 500px;
     margin-left: -50px;
   }
   .what-content {
@@ -300,16 +307,14 @@
   .what-content p {
     font-size: 14px;
   }
-  .what-noTouch:hover,
+  .what-content:hover,
   .what-content-active {
-    min-height: 67%;
     padding: 50px;
   }
 
-  .what-noTouch:hover ~ .what-content,
-  .what-box-in:hover .what-noTouch:not(:hover),
+  .what-content:hover ~ .what-content,
+  .what-box-in:hover .what-content:not(:hover),
   .what-content.what-sibling {
-    min-height: 33%;
     padding: 10px 50px;
   }
 }
@@ -326,7 +331,7 @@
     justify-content: left;
   }
   .what-box:last-child {
-    height: 500px;
+    height: auto;
   }
   .what-box {
     width: 500px;
@@ -338,16 +343,16 @@
   }
   .what-box-in {
     margin-left: 0px;
-    height: 450px;
+    height: auto;
   }
   .what-content h5,
   .what-content-flex {
     opacity: 0;
     transition: 0.3s;
   }
-  .what-noTouch:hover h5,
+  .what-content:hover h5,
   .what-content-active h5,
-  .what-noTouch:hover .what-content-flex,
+  .what-content:hover .what-content-flex,
   .what-content-active .what-content-flex {
     opacity: 1;
   }
@@ -357,7 +362,7 @@
   .what-content p {
     font-size: 11px;
   }
-  .what-noTouch:hover,
+  .what-content:hover,
   .what-content-active {
     padding: 10px 30px;
   }
@@ -365,8 +370,8 @@
     font-size: 11px;
   }
 
-  .what-noTouch:hover ~ .what-content,
-  .what-box-in:hover .what-noTouch:not(:hover),
+  .what-content:hover ~ .what-content,
+  .what-box-in:hover .what-content:not(:hover),
   .what-content.what-sibling {
     padding: 5px 30px;
   }

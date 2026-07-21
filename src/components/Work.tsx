@@ -28,7 +28,7 @@ const projects: Project[] = [
     tools: "React, Node.js, Express, MongoDB, JWT, Leaflet.js, PDFKit",
     description:
       "Full-stack MERN civic complaint platform with NLP auto-classification, SLA monitoring, duplicate detection via geographic proximity, and real-time notifications across three user roles. Scored 97 Performance, 100 Best Practices, and 91 SEO on Lighthouse.",
-    image: "/images/placeholder.webp",
+    image: "/images/shomadhan.jpg",
     link: "https://shomadhan-eight.vercel.app",
     github: "https://github.com/ifaz07/Shomadhan",
     demo: "https://shomadhan-eight.vercel.app",
@@ -37,10 +37,9 @@ const projects: Project[] = [
     group: "Full-Stack",
     title: "ShastoSheba",
     category: "Telehealth Platform for Bangladesh",
-    tools: "Full-Stack, Video Consultation, Ai Health Assistant, Messaging System",
+    tools: "React, TypeScript, Node.js, Express, MongoDB, JWT, Twilio Video, Google Gemini, Tailwind CSS",
     description:
-      "Patients find verified doctors, book in-person or online consultations, pay through mobile banking, join video calls, and receive prescriptions, reminders, and emergency services. Doctors manage availability, schedules, patient charts, and payments from a dedicated portal.",
-    image: "/images/placeholder.webp",
+      "Full-stack telehealth platform where patients book in-person or video consultations with verified doctors, paying online through mobile banking. Doctors manage availability, verify payments, and issue prescriptions, while patients get Twilio video calls, auto-expiring medication reminders, and a Gemini-powered AI assistant in English or Bangla.",    image: "/images/shastosheba.jpg",
     link: "https://github.com/ifaz07/Shasto-Sheba",
     github: "https://github.com/ifaz07/Shasto-Sheba",
   },
@@ -51,7 +50,7 @@ const projects: Project[] = [
     tools: "PHP, MySQL, JavaScript, PHPMailer",
     description:
       "Normalized MySQL schema with complex JOIN queries powering booking history, multi-filter search across location, price and capacity, and real-time availability validation. Role-based dashboards for users, owners, and admins with automated email notifications.",
-    image: "/images/placeholder.webp",
+    image: "/images/findyourturf.jpg",
     link: "https://github.com/ifaz07/TurfProject",
     github: "https://github.com/ifaz07/TurfProject",
   },
@@ -64,8 +63,8 @@ const projects: Project[] = [
     tools: "NestJS, TypeScript, PostgreSQL, Prisma, JWT, Swagger, Cloudinary",
     description:
       "Task management REST API with JWT auth, rotating refresh tokens hashed at rest, and ownership-based access control. Gap-based position logic avoids full re-indexing on every move, plus soft deletes, activity logging, and Cloudinary attachments streamed without disk writes.",
-    image: "/images/placeholder.webp",
-    link: "https://github.com/ifaz07/Kanban-Board-System-",
+    image: "/images/kanban-board-api.jpg",
+    link: "https://kanban-board-system.onrender.com/api/docs",
     github: "https://github.com/ifaz07/Kanban-Board-System-",
     // TODO(links): add the live Render deployment URL as `demo`.
   },
@@ -78,19 +77,18 @@ const projects: Project[] = [
     tools: "Python, Whisper, LangChain, Mistral, ChromaDB, Streamlit",
     description:
       "Turns a YouTube link or local recording into a transcript, executive summary, action items, and open questions. Local Whisper for English with Sarvam AI routing for Bangla and Hindi, plus a RAG chat grounded strictly in transcript content via ChromaDB embeddings.",
-    image: "/images/placeholder.webp",
-    // TODO(links): point at the dedicated EchoMinutes repo once it is public.
-    link: "https://github.com/ifaz07",
-    github: "https://github.com/ifaz07",
+    image: "/images/echominutes.jpg",
+    link: "https://github.com/ifaz07/EchoMinutes---AI-Meeting-Assistant",
+    github: "https://github.com/ifaz07/EchoMinutes---AI-Meeting-Assistant",
   },
   {
     group: "AI / ML / NLP",
     title: "Fraud Detection",
     category: "EDA and Classification Pipeline",
-    tools: "Python, Scikit-learn, XGBoost, SMOTE, Pandas, Matplotlib, Seaborn",
+    tools: "Python, Scikit-learn, SMOTE, Pandas, Matplotlib, Seaborn",
     description:
       "End-to-end ML pipeline on 1.2M+ transaction records with preprocessing, SMOTE resampling, and feature engineering. Random Forest reached an 82% F1-score on the fraud class and 85% ROC-AUC, validated against data leakage between train and test splits.",
-    image: "/images/placeholder.webp",
+    image: "/images/fraud-detection.jpg",
     link: "https://github.com/ifaz07/Machine-Learning-Projects",
     github: "https://github.com/ifaz07/Machine-Learning-Projects",
   },
@@ -101,7 +99,7 @@ const projects: Project[] = [
     tools: "Python, TF-IDF, Word2Vec, RNN, LSTM, GRU, Scikit-learn",
     description:
       "Designed and benchmarked six NLP architectures across TF-IDF, Word2Vec, RNN, LSTM, GRU, and a hybrid model for 10-category text classification, with structured precision, recall, and F1-score evaluation reports for each.",
-    image: "/images/placeholder.webp",
+    image: "/images/nlp-classifier.jpg",
     link: "https://github.com/ifaz07/Natural-Language-Processing-NLP-",
     github: "https://github.com/ifaz07/Natural-Language-Processing-NLP-",
   },
@@ -113,20 +111,20 @@ const projects: Project[] = [
     category: "Undergraduate Thesis, Bangla LLMs (A+, 97/100)",
     tools: "Python, BERT, mDeBERTa, LLaMA 3, Gemma 3, Phi-4, NLI",
     description:
-      "My undergraduate thesis, completed May 2026 and graded A+ at 97/100. A six-signal hybrid verification pipeline detecting hallucinations in Bangla LLM output across QA, summarisation, and translation. Extracted attention weights and logits across 32 layers (363 features per token), reaching classifier AUC of 0.687 to 0.730 over 9,000 benchmarked evaluations.",
-    image: "/images/placeholder.webp",
+      "My undergraduate thesis, completed May 2026 and graded A+ at 97/100. A six-signal hybrid verification pipeline detecting hallucinations in Bangla LLM output across QA, summarisation, and translation. Extracted attention weights and logits across 32 layers (363 features per token) for llama3, reaching classifier AUC of 0.687 to 0.830 for different ML models over 9,000 benchmarked evaluations.",
+    image: "/images/thesis-hallucination.jpg",
     // TODO(links): point at the dedicated thesis repo once it is public.
-    link: "https://github.com/ifaz07",
-    github: "https://github.com/ifaz07",
+    link: "https://github.com/ifaz07/Undergraduate-Thesis---Bangla-Language-Hallucination-Detection",
+    github: "https://github.com/ifaz07/Undergraduate-Thesis---Bangla-Language-Hallucination-Detection",
   },
   {
     group: "Research",
     title: "AI-Generated Code Detection",
     category: "Stylometric ML Pipeline",
-    tools: "Python, TF-IDF, XGBoost, Scikit-learn, Pandas, PCA, t-SNE",
+    tools: "Python, TF-IDF, PyTorch, Scikit-learn, Pandas, PCA, t-SNE",
     description:
       "Prepared and labelled a 1.96M-sample dataset classifying human-written code against ChatGPT, DeepSeek, and Qwen output using TF-IDF vectorisation and stylometric feature engineering. Five classifiers compared at 75.07% accuracy, with PCA, t-SNE, and structured error analysis.",
-    image: "/images/placeholder.webp",
+    image: "/images/ai-code-detection.jpg",
     link: "https://github.com/ifaz07/Data-Science",
     github: "https://github.com/ifaz07/Data-Science",
   },
@@ -139,7 +137,7 @@ const projects: Project[] = [
     tools: "Solidity, Ethereum, Web3.js, MetaMask, Truffle, Ganache",
     description:
       "A decentralized freelance marketplace on Ethereum built with Solidity smart contracts. Features escrow-based payments, role-based dashboards, a bidding system, dispute resolution, freelancer reputation tracking, and MetaMask integration for transaction signing.",
-    image: "/images/placeholder.webp",
+    image: "/images/blockchain-marketplace.jpg",
     link: "https://github.com/ifaz07/Freelance-Market-Escrow---BlockChain-Project",
     github:
       "https://github.com/ifaz07/Freelance-Market-Escrow---BlockChain-Project",
