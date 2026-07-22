@@ -296,7 +296,31 @@ h2.landing-info-h2 {
 
 @media screen and (min-width: 768px) {
   .character-model {
-    height: 80vh;
+    height: 100svh;
+    bottom: 0;
+    position: fixed;
+    z-index: 11;
+  }
+
+  .character-model::after,
+  .character-model::before {
+    display: none;
+  }
+
+  .landing-intro {
+    top: 50%;
+    left: auto;
+    right: 62%;
+    transform: translateY(-50%);
+  }
+
+  .landing-info {
+    top: 51%;
+    right: auto;
+    bottom: auto;
+    left: 58%;
+    transform: translateY(-50%);
+    text-align: left;
   }
 
   .landing-intro h2 {
@@ -323,32 +347,11 @@ h2.landing-info-h2 {
 }
 
 @media screen and (min-width: 1025px) {
-  .character-model {
-    height: 100vh;
-    bottom: 0;
-    z-index: 11;
-    position: fixed;
-  }
-
-  .character-model::after,
-  .character-model::before {
-    display: none;
-  }
-
   .landing-intro {
-    top: 50%;
-    left: auto;
     right: 66%;
-    transform: translate(0%, -50%);
   }
 
   .landing-info {
-    bottom: auto;
-    top: 51%;
-    z-index: inherit;
-    text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
     left: 66%;
   }
 }
