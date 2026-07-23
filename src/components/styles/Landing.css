@@ -14,6 +14,14 @@
   max-width: var(--cMaxWidth);
 }
 
+/* The fixed WebGL canvas is rendered outside #smooth-wrapper. Keep all
+   scrollable page content above it so the character cannot cover hero copy or
+   hide the About section after ScrollSmoother creates its own stacking layer. */
+#smooth-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
 .landing-circle1 {
   top: 0%;
   left: 0%;
@@ -296,10 +304,17 @@ h2.landing-info-h2 {
 
 @media screen and (min-width: 768px) {
   .character-model {
-    height: 100svh;
-    bottom: 0;
     position: fixed;
-    z-index: 11;
+    inset: 0;
+    width: 100vw;
+    height: 100svh;
+    max-width: none;
+    max-height: none;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    z-index: 1;
+    pointer-events: none;
   }
 
   .character-model::after,
@@ -307,20 +322,44 @@ h2.landing-info-h2 {
     display: none;
   }
 
-  .landing-intro {
-    top: 50%;
+  .landing-content {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    /* Reserve the head/shoulders, not the whole viewport, so the two copy
+       blocks sit at the balanced distances shown in the hero reference. */
+    grid-template-columns: minmax(0, 1fr) minmax(460px, 34vw, 500px) minmax(0, 1fr);
+    align-items: center;
+    width: min(100%, 1600px);
+    margin: auto;
+  }
+
+  .landing-intro,
+  .landing-info {
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
     left: auto;
-    right: 62%;
-    transform: translateY(-50%);
+    transform: none;
+    text-align: left;
+  }
+
+  .landing-intro {
+    grid-column: 1;
+    justify-self: end;
+    margin-right: clamp(120px, 15vw, 180px);
   }
 
   .landing-info {
-    top: 51%;
-    right: auto;
-    bottom: auto;
-    left: 58%;
-    transform: translateY(-50%);
-    text-align: left;
+    grid-column: 3;
+    justify-self: start;
+    margin-left: clamp(120px, 15vw, 180px);
+  }
+
+  .character-hover {
+    pointer-events: auto;
   }
 
   .landing-intro h2 {
@@ -343,48 +382,6 @@ h2.landing-info-h2 {
 
   h2.landing-info-h2 {
     font-size: 48px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .landing-intro {
-    right: 66%;
-  }
-
-  .landing-info {
-    left: 66%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .landing-intro {
-    top: 50%;
-    left: auto;
-    right: 70%;
-    transform: translate(0%, -50%);
-  }
-
-  .landing-info {
-    bottom: auto;
-    top: 51%;
-    z-index: inherit;
-    text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
-    left: 70%;
-  }
-}
-
-/* The 1200px+ composition is designed for very wide monitors. On common
-   laptops the full-width WebGL canvas and right-hand introduction occupy the
-   same horizontal space. Shift the canvas and copy as a matched composition. */
-@media screen and (min-width: 768px) and (max-width: 1599px) {
-  .landing-info {
-    left: 45%;
-  }
-
-  h2.landing-info-h2 {
-    font-size: 44px;
   }
 }
 
