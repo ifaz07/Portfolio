@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 
+.chrome-test-profile
+
 # TypeScript incremental build artifacts
 *.tsbuildinfo
 
