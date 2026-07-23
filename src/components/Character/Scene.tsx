@@ -3,7 +3,11 @@ import * as THREE from "three";
 import setCharacter from "./utils/character";
 import setLighting from "./utils/lighting";
 import { useLoading } from "../../context/LoadingProvider";
-import handleResize, { setCameraFraming } from "./utils/resizeUtils";
+import {
+  default as handleResize,
+  setCameraFraming,
+  setCharacterFraming,
+} from "./utils/resizeUtils";
 import {
   handleMouseMove,
   handleTouchEnd,
@@ -97,6 +101,7 @@ const Scene = () => {
           hoverDivRef.current && animations.hover(gltf, hoverDivRef.current);
           mixer = animations.mixer;
           const character = gltf.scene;
+          setCharacterFraming(character, container.width);
           setChar(character);
           scene.add(character);
           headBone = character.getObjectByName("spine006") || null;

@@ -376,11 +376,15 @@ h2.landing-info-h2 {
 }
 
 /* The 1200px+ composition is designed for very wide monitors. On common
-   laptops it places the right-hand introduction underneath the character.
-   Move it inward until the wide-screen layout has enough room again. */
+   laptops the full-width WebGL canvas and right-hand introduction occupy the
+   same horizontal space. Shift the canvas and copy as a matched composition. */
 @media screen and (min-width: 768px) and (max-width: 1599px) {
   .landing-info {
-    left: 60%;
+    left: 45%;
+  }
+
+  h2.landing-info-h2 {
+    font-size: 44px;
   }
 }
 

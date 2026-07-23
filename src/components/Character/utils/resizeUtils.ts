@@ -17,6 +17,19 @@ export function setCameraFraming(
   camera.position.x = compactDesktop ? 1.5 : 0;
 }
 
+/** Keep the actual GLTF scene inside the safe area on laptop-sized desktops.
+ * This changes the 3D object's world transform, not the surrounding canvas. */
+export function setCharacterFraming(
+  character: THREE.Object3D,
+  viewportWidth: number
+) {
+  const compactDesktop = viewportWidth >= 768 && viewportWidth < 1600;
+  const scale = compactDesktop ? 0.88 : 1;
+
+  character.scale.setScalar(scale);
+  character.position.x = compactDesktop ? -1.1 : 0;
+}
+
 export default function handleResize(
   renderer: THREE.WebGLRenderer,
   camera: THREE.PerspectiveCamera,
@@ -33,6 +46,7 @@ export default function handleResize(
   renderer.setSize(width, height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   setCameraFraming(camera, width);
+  setCharacterFraming(character, width);
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
   const workTrigger = ScrollTrigger.getById("work");
