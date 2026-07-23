@@ -4,6 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { smoother } from "../Navbar";
 
 export function initialFX() {
+  // Reset both native and ScrollSmoother positions after the loading overlay
+  // disappears. Doing it here also covers slow devices, where native scroll
+  // restoration can otherwise run after the smoother was created.
+  window.scrollTo(0, 0);
+  smoother.scrollTop(0);
   document.body.style.overflowY = "auto";
   smoother.paused(false);
   document.getElementsByTagName("main")[0].classList.add("main-active");

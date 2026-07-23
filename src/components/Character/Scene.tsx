@@ -3,7 +3,7 @@ import * as THREE from "three";
 import setCharacter from "./utils/character";
 import setLighting from "./utils/lighting";
 import { useLoading } from "../../context/LoadingProvider";
-import handleResize from "./utils/resizeUtils";
+import handleResize, { setCameraFraming } from "./utils/resizeUtils";
 import {
   handleMouseMove,
   handleTouchEnd,
@@ -59,6 +59,7 @@ const Scene = () => {
       const camera = new THREE.PerspectiveCamera(14.5, aspect, 0.1, 1000);
       camera.position.z = 10;
       camera.position.set(0, 13.1, 24.7);
+      setCameraFraming(camera, container.width);
 
       // Keeps the projection matched to the real container box. Deliberately
       // does NOT rebuild the GSAP timelines the way handleResize does; this can
@@ -72,6 +73,7 @@ const Scene = () => {
         lastW = width;
         lastH = height;
         renderer.setSize(width, height);
+        setCameraFraming(camera, width);
         camera.aspect = width / height;
         camera.updateProjectionMatrix();
       });
