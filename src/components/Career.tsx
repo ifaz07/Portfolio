@@ -2,7 +2,7 @@ import "./styles/Career.css";
 
 const Career = () => {
   return (
-    <div className="career-section section-container">
+    <div className="career-section section-container" id="experience">
       <div className="career-container">
         <h2>
           My journey <span>&</span>
@@ -15,30 +15,42 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>BSc Computer Science</h4>
-                <h5>BRAC University · GPA 3.90/4.0</h5>
+                <h4>Software Engineering Intern</h4>
+                <h5>Metaora · React · Node.js · PostgreSQL</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Sep 2022 – Jun 2026, Dhaka. Dean's List across multiple semesters.
-              Coursework in Machine Learning, NLP, Data Science, Database Systems, Software
-              Engineering, Data Structure & Algorithms, and System Analysis &amp; Design.
+              Aug 2026 – Present, Remote.{" "}
+              <a
+                href="https://www.metaora.ai/"
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="disable"
+              >
+                Metaora
+              </a>{" "}
+              builds AI voice solutions for businesses. I turn client
+              requirements into Retell voice agents, test live calls and
+              transcripts, and improve agent behavior through iterative fixes.
+              I also contribute React, Node.js, and PostgreSQL features to the
+              product on dev and staging.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Backend Engineering</h4>
-                <h5>NestJS · PostgreSQL · Prisma</h5>
+                <h4>BSc Computer Science</h4>
+                <h5>BRAC University · GPA 3.90/4.0</h5>
               </div>
-              <h3>2026</h3>
+              <h3>2022–2026</h3>
             </div>
             <p>
-              Built a production-oriented Kanban REST API as a backend internship
-              take-home: JWT auth with rotating refresh tokens hashed at rest,
-              ownership-based access control, gap-based task reordering, soft
-              deletes, Cloudinary attachments, Swagger docs, deployed on Render.
+              Sep 2022 to Jun 2026 at BRAC University, Dhaka. Graduated with a
+              GPA of 3.90/4.0 and made the Dean's List across multiple
+              semesters. Coursework included Machine Learning, NLP, Data
+              Science, Database Systems, Software Engineering, Data Structure
+              &amp; Algorithms, and System Analysis &amp; Design.
             </p>
           </div>
           <div className="career-info-box">
@@ -50,7 +62,7 @@ const Career = () => {
               <h3>2025–26</h3>
             </div>
             <p>
-              May 2025 to May 2026, graded A+ (97/100). A six-signal hybrid
+              May 2025 to June 2026, graded A+ (97/100). A six-signal hybrid
               pipeline for detecting hallucinations in Bangla LLM output.
               Extracted attention weights and logits across 32 layers (363
               features per token) to train classifiers on intermediate neural
@@ -113,7 +125,9 @@ const Career = () => {
               <h3>2026</h3>
             </div>
             <p>
-              LeetCode 50 Days Badge for consistent daily problem solving.
+              LeetCode 100 Days Badge for consistent daily problem solving.
+              1st Runner-Up, CSE471 System Analysis and Design Project Showcase
+              4.0 for Shomadhan, selected among 120 submissions.{" "}
               Deloitte Australia Technology Job Simulation (coding &amp;
               technology track). DataCamp: Data Manipulation in Python, Data
               Manipulation with Pandas, Joining Data with Pandas, Reshaping Data
@@ -124,14 +138,14 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>DSA</h4>
-                <h5>200+ problems solved</h5>
+                <h5>Around 300 problems solved</h5>
               </div>
               <h3>ONGOING</h3>
             </div>
             <p>
-              Solved 200+ data structures and algorithms problems across arrays,
+              Solved around 300 data structures and algorithms problems across arrays,
               trees, graphs, dynamic programming, binary search, and two
-              pointers, with a 50 day solving streak on{" "}
+              pointers on{" "}
               <a
                 href="https://leetcode.com/u/ifaz_07/"
                 target="_blank"

@@ -37,7 +37,8 @@ const Contact = () => {
             <p>Dhaka, Bangladesh</p>
             <h4>Education</h4>
             <p>
-              BSc in Computer Science, BRAC University, 2022 to 2026 · GPA 3.90/4.0
+              BSc in Computer Science, BRAC University, graduated June 2026 ·
+              GPA 3.90/4.0
             </p>
           </div>
           <div className="contact-box">

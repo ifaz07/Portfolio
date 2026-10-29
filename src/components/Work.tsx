@@ -45,6 +45,17 @@ const projects: Project[] = [
   },
   {
     group: "Full-Stack",
+    title: "Atrium Coaching Center",
+    category: "Coaching Center Management System",
+    tools: "Next.js, TypeScript, Node.js, Express, PostgreSQL, OpenAI-compatible API",
+    description:
+      "Full-stack management system for a US-based coaching center, featuring session booking, room scheduling, credit management, AI-powered assistance, email notifications, and calendar integration.",
+    image: "/images/atrium-coaching-center.png",
+    link: "https://github.com/ifaz07/Atrium-Coaching-Center",
+    github: "https://github.com/ifaz07/Atrium-Coaching-Center",
+  },
+  {
+    group: "Full-Stack",
     title: "FindYourTurf",
     category: "Sports Venue Booking Platform",
     tools: "PHP, MySQL, JavaScript, PHPMailer",
@@ -78,8 +89,9 @@ const projects: Project[] = [
     description:
       "Turns a YouTube link or local recording into a transcript, executive summary, action items, and open questions. Local Whisper for English with Sarvam AI routing for Bangla and Hindi, plus a RAG chat grounded strictly in transcript content via ChromaDB embeddings.",
     image: "/images/echominutes.jpg",
-    link: "https://github.com/ifaz07/EchoMinutes---AI-Meeting-Assistant",
+    link: "https://echominutes---ai-meeting-assistant-m3awfy4kn93kpx8cyvnb8z.streamlit.app/",
     github: "https://github.com/ifaz07/EchoMinutes---AI-Meeting-Assistant",
+    demo: "https://echominutes---ai-meeting-assistant-m3awfy4kn93kpx8cyvnb8z.streamlit.app/",
   },
   {
     group: "Machine Learning",
